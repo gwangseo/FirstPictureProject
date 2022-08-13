@@ -27,7 +27,7 @@ public class MemberController {
     @PostMapping(value = "/members/new")
     public String create(MemberForm form, BindingResult result) {
         if (result.hasErrors()) {
-            return "join";
+            return "members/join";
         }
         Member member = new Member();
         member.setName(form.getName());
