@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Main</title>
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 환영합니다. 로그인 해주세요
-<div>
-    <label for="email">이메일: </label>
-    <input id="email" type="text">
-</div>
-<div>
-    <label for="password">비밀번호: </label>
-    <input id="password" type="password">
-</div>
-<p>
-    <a class="btn btn-lg- btn-secondary" href="/members/new">회원 가입</a>
-    <a class="btn btn-lg- btn-secondary" href="/members">회원 목록</a>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div class="jumbotron">
+        <label for="email">이메일: </label>
+        <input id="email" type="text">
 
-</p>
+        <label for="password">비밀번호: </label>
+        <input id="password" type="password">
 
-<div>
-    <img src="https://previews.123rf.com/images/ingomenhard/ingomenhard1706/ingomenhard170600326/80721597-%EA%B5%AD%EA%B0%80%EC%99%80-%ED%98%84%EB%8C%80%EC%A0%81%EC%9D%B8-%EC%9B%90%ED%98%95%EC%9D%84-%EA%B0%80%EC%A7%84-%ED%95%9C%EA%B5%AD%EC%A7%80%EB%8F%84.jpg?fj=1", alt="MyImage">
+        <p class="lead">회원 기능</p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/members/new">회원 가입</a>
+            <a class="btn btn-lg btn-secondary" href="/members">회원 목록</a>
+        </p>
+    </div>
+
+
+    <div>
+        <img src="https://previews.123rf.com/images/ingomenhard/ingomenhard1706/ingomenhard170600326/80721597-%EA%B5%AD%EA%B0%80%EC%99%80-%ED%98%84%EB%8C%80%EC%A0%81%EC%9D%B8-%EC%9B%90%ED%98%95%EC%9D%84-%EA%B0%80%EC%A7%84-%ED%95%9C%EA%B5%AD%EC%A7%80%EB%8F%84.jpg?fj=1", alt="MyImage">
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
 </div>
 </body>
 </html>
